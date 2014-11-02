@@ -1,0 +1,84 @@
+# .tm_properties based file from http://gist.github.com/1478685
+# ---------------------------------------------------------
+
+# ---------------------------------------------------------
+# Display the name of the home directory
+# ---------------------------------------------------------
+windowTitle    = "$TM_DISPLAYNAME - ${CWD/^.*\///}"
+
+# ---------------------------------------------------------
+# Global Settings
+# ---------------------------------------------------------
+encoding         = UTF-8
+fontName         = Inconsolata-dz
+fontSize         = 13.000000
+lineEndings      = '\n'
+showInvisibles   = false
+softWrap         = true
+tabSize          = 4
+spellChecking	 = false
+
+# Now using Monokai
+theme            = D8D5E82E-3D5B-46B5-B38E-8C841C21347D
+
+# ---------------------------------------------------------
+# Variables
+# ---------------------------------------------------------
+TM_FULLNAME   = "Johann Wilfling"
+TM_ORGANIZATION = "AAU"
+PATH   = "/usr/local/bin:$HOME/.rbenv/bin:$PATH"
+TM_GIT        = "/usr/local/bin/git"
+TM_HG         = "/usr/local/bin/hg"
+TM_RUBY = "$HOME/.rbenv/shims/ruby"
+
+# ---------------------------------------------------------
+# Omit .tm_properties so it doesn't show in the browser
+# ---------------------------------------------------------
+myIncludes = ".*"
+include        = "{$include,$myIncludes}"
+
+# ---------------------------------------------------------
+# Exclude old *.tmproj files
+# ---------------------------------------------------------
+myExcludes = "*.tmproj"
+exclude        = "{$exclude,$myExcludes}"
+# excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
+# excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
+
+
+[ text ]
+softWrap       = false
+wrapColumn     = 80
+softTabs       = true
+tabSize        = 4
+
+[ text.html.markdown ]
+softWrap       = true
+wrapColumn     = "Use Window Frame"
+softTabs       = false
+tabSize        = 4
+
+[ text.plain ]
+softWrap       = true
+wrapColumn     = "Use Window Frame"
+softTabs       = false
+tabSize        = 4
+
+[ source ]
+softWrap       = false
+wrapColumn     = 80
+softTabs       = true
+tabSize        = 4
+
+[ source.plist ]
+softTabs       = false
+tabSize        = 4
+
+[ source.tm-properties ]
+spellChecking  = false
+
+[ "{Capfile,Gemfile,Gemfile.lock,Guardfile}" ]
+fileType         = source.ruby
+
+[ Procfile ]
+fileType         = source.yaml

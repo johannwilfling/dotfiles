@@ -1,3 +1,7 @@
+[user]
+	name = Johann Wilfling
+	email = johann.wilfling@gmail.com
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -68,6 +72,41 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+    
+	# status
+	st = status
+	
+	# checkout
+	co = checkout
+	
+	# branch
+	br = branch
+	sb = show-branch
+
+	# diff
+	d = diff
+	staged = diff --cached
+    
+    # reset
+    # remove files from index (tracking)
+    unstage = reset HEAD    
+    # go back before last commit, with files in uncommitted state
+    uncommit = reset --soft HEAD^
+    # show changes to a file
+    filelog = log -u                  
+
+	# log
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    l = log --graph --date=short
+    changes = log --pretty=format:'%h %cr %cn %Cgreen%s%Creset' --name-status
+    short = log --pretty=format:'%h %cr %cn %Cgreen%s%Creset'
+    changelog = log --pretty=format:' * %s'
+	wu = log --stat origin..@{0}
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+	
+    # simple topic branch workflow with rebase
+	up = !CURRENT=$(git branch | grep '*' | awk '{print $2}') && git checkout master && git pull origin master && git checkout ${CURRENT} && git rebase master
+	ship = !CURRENT=$(git branch | grep '*' | awk '{print $2}') && git checkout master && git merge --no-ff ${CURRENT} && git push origin master
 
 [apply]
 
