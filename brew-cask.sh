@@ -6,8 +6,14 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# install cask
+brew install caskroom/cask/brew-cask
+
 # Make sure we’re using the latest Homebrew.
 brew update
+
+# tap versions e.g. for java6 or beta versions
+brew tap caskroom/versions
 
 # Upgrade brew-cask before installing
 brew upgrade brew-cask
@@ -33,6 +39,7 @@ brew cask install transmission
 brew cask install vlc
 brew cask install opera
 brew cask install cord
+brew cask install textmate
 
 # quicklook
 brew cask install qlcolorcode
@@ -57,6 +64,10 @@ brew cask install quicklook-json
 #brew cask install virtualbox
 #brew cask install vagrant
 #brew cask install skype
+
+# aau development
+#brew cask install intellij-idea
+#brew cask install java6
 
 
 
