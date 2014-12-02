@@ -98,6 +98,13 @@ brew install rbenv
 brew install ruby-build
 brew install ssh-copy-id
 brew install unrar
+brew install ngrep
+
+# aau development
+#brew install httpd22
+#brew tap homebrew/versions
+#brew install maven2
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
