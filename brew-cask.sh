@@ -40,6 +40,7 @@ brew cask install vlc
 brew cask install opera
 brew cask install cord
 brew cask install textmate
+brew cask install flash
 
 # quicklook
 brew cask install qlcolorcode
