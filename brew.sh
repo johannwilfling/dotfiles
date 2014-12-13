@@ -105,6 +105,5 @@ brew install ngrep
 #brew tap homebrew/versions
 #brew install maven2
 
-
 # Remove outdated versions from the cellar.
 brew cleanup
