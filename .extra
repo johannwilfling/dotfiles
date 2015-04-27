@@ -1,0 +1,7 @@
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+eval "$(rbenv init -)"
+
+# ssh-agent & ssh-add
+ssh-add -K
